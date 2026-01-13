@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+
+    font-weight: bold;
+    font-size: 1.1rem;
+
+}
+button{
+    cursor: pointer;
+}
+body{
+    background-color: darkgray;
+}
+
+.calculator{
+    display: flex;
+    flex-direction: column;
+
+    width: 300px;
+    height: 400px;
+
+    position: absolute;
+    top: 50%; left: 50%; translate: -50% -50%;
+
+    /* border: 5px solid gray; */
+    box-shadow: 0 0 15px rgb(53, 52, 52);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.display{
+    background-color: black;
+    flex: 0.5;
+
+    text-align: end;
+}
+
+.display p{
+    color: white;
+    margin-right: 5px;
+    padding-right: 5px;
+}
+
+.display p:first-child{
+    font-size: 2rem;
+    margin-top: 10px;
+
+}
+
+.display p:last-child{
+    font-size: 1rem;
+}
+
+.keyboard{
+    flex: 2;
+    display: flex;
+}
+
+.left-controls{
+    flex: 2;
+
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 2px;
+}
+
+.left-controls button{
+    flex: 50px;
+    background-color: lightgray;
+    color: gray;
+}
+
+.left-controls button:hover{
+    background-color: gainsboro;
+}
+
+.right-controls{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-controls button{
+    flex: 1;
+    background-color: gray;
+    color: lightgray;
+    font-size: 1.8rem;
+
+    padding: 10px;
+}
+
+.right-controls button:last-child{
+    flex: 2;
+    background-color: rgb(93, 92, 92);
+}
+
+.right-controls button:hover{
+    background-color: rgb(93, 92, 92);
+}
