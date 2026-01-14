@@ -46,39 +46,42 @@ opBtns.forEach((opBtn) => {
       }
 
       console.log(sumTotal);
-      calcTxt.textContent = "" + sumTotal;
+      calcTxt.textContent = "" + `${sumTotal}`;
       value1 = `${sumTotal}`;
       value2 = "";
       op = "";
+      hasOp = false;
       return;
     }
+
     op = e.target.textContent;
     updateCalcTxt(e.target.textContent);
     hasOp = true;
   });
 });
 equalBtn.addEventListener("click", (e) => {
-      if (op !== "") {
-      switch (op) {
-        case "+":
-          sumTotal = +value1 + +value2;
-          break;
-        case "-":
-          sumTotal + value1 - +value2;
-          break;
-        case "/":
-          sumTotal = +value1 / +value2;
-          break;
-        case "x":
-          sumTotal = +value1 * +value2;
-          break;
-      }
-  console.log(sumTotal);
-  calcTxt.textContent = "" + sumTotal;
-  value1 = `${sumTotal}`;
-  value2 = "";
-  op = "";
+  if (op !== "") {
+    switch (op) {
+      case "+":
+        sumTotal = +value1 + +value2;
+        break;
+      case "-":
+        sumTotal + value1 - +value2;
+        break;
+      case "/":
+        sumTotal = +value1 / +value2;
+        break;
+      case "x":
+        sumTotal = +value1 * +value2;
+        break;
     }
+    console.log(sumTotal);
+    calcTxt.textContent = "" + `${sumTotal}`;
+    value1 = `${sumTotal}`;
+    value2 = "";
+    op = "";
+    hasOp = false;
+  }
 });
 
 // helper functions
