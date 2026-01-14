@@ -21,7 +21,6 @@ numberBtns.forEach((numberBtn) => {
     if (hasOp) {
       value2 += e.target.textContent;
       updateCalcTxt(e.target.textContent);
-      setTimeout(() => calcTxt.textContent = sumTotal,500)
     } else {
       value1 += e.target.textContent;
       updateCalcTxt(e.target.textContent);
